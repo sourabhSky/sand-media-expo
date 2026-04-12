@@ -19,23 +19,19 @@ export default function Header() {
 
   const services = {
     'Web': [
-      { name: 'Web Design', href: '/web-dev' },
+      
       { name: 'Web Development', href: '/web-dev' },
-      { name: 'eCommerce Websites', href: '#ecommerce' },
-      { name: 'Plugin', href: '/plugin' },
+      
+      { name: 'Custom Plugin', href: '/custom-plugin' },
       { name: 'Website Support', href: '#support' },
     ],
     'Digital Marketing': [
       { name: 'SEO', href: '/seo' },
       { name: 'PPC', href: '/ppc' },
-      { name: 'Social Media', href: '/socialmedia' },
-      { name: 'AI Marketing', href: '#ai' },
+      { name: 'Social Media', href: '/social-media' },
+      { name: 'Commercial Photography', href: '/commercial-photoshoot' },
     ],
-    'Creative': [
-      { name: 'Branding', href: '#branding' },
-      { name: 'Design', href: '#design' },
-      { name: 'UI/UX', href: '#ui-ux' },
-    ],
+    
   }
 
   return (
@@ -59,7 +55,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link
-              href="#about"
+              href="/about"
               className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
             >
               About
@@ -121,7 +117,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="#contact"
+              href="/contact"
               className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
             >
               Contact
@@ -150,7 +146,7 @@ export default function Header() {
           <div className="lg:hidden bg-white border-t border-gray-200 py-6 animate-fade-in">
             <div className="space-y-4">
               <Link
-                href="#about"
+                href="/about"
                 className="block text-base font-medium text-gray-900 hover:text-black px-4 py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -201,7 +197,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="#contact"
+                href="/contact"
                 className="block text-base font-medium text-gray-900 hover:text-black px-4 py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
