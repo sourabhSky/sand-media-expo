@@ -15,9 +15,9 @@ import AdvancedFeatures from "@/components/AdvancedFeatures";
 import ResultsSlider from "@/components/ResultsSlider";
 import PerformanceServices from "@/components/PerformanceServices";
 import PpcHero from "@/components/PpcHero";
+import advancedFeaturesData from "../../public/data/advancedFeatures.json"
 
-
-
+import caseStudiesData from "../../public/data/caseStudies.json"
 
 
 
@@ -26,10 +26,10 @@ const index: NextPage = () => {
    <>
    <PpcHero/>
    <PerformanceServices/>
-   <ResultsSlider/>
+   <ResultsSlider data={caseStudiesData} />
     <AboutProcess/>
-    <AdvancedFeatures/>
-    <Pricing/>
+    <AdvancedFeatures data={advancedFeaturesData} />
+    {/* <Pricing/> */}
      <FAQSection/>
      <AboutContact/>
     <CTABand/>

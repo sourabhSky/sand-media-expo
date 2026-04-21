@@ -1,0 +1,29 @@
+{
+  "sectionConfig": {
+    "bgColor": "bg-[#FDFDFD]",
+    "cardRadius": "rounded-[2rem] md:rounded-[3rem]"
+  },
+  "items": [
+    {
+      "id": "content",
+      "title": "Content Creation Studio",
+      "subtitle": "Crafted for every platform",
+      "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1200&auto=format&fit=crop",
+      "colSpan": "lg:col-span-2"
+    },
+    {
+      "id": "engagement",
+      "title": "Audience Engagement",
+      "subtitle": "Real-time growth",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
+      "colSpan": "lg:col-span-1"
+    },
+    {
+      "id": "analytics",
+      "title": "Performance Analytics",
+      "subtitle": "Data-driven strategy",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+      "colSpan": "lg:col-span-1"
+    }
+  ]
+}

@@ -19,12 +19,12 @@ const SocialMediaConsultancy = () => {
     <section className="bg-black text-white section-padding overflow-hidden">
       <div className="container-custom">
         {/* Full-width Title Section Above the Grid */}
-        <div className="mb-16 animate-fade-in-up">
+        <div className="mb-16 animate-fade-in-up text-center sm:text-start">
           <h2 className="text-white leading-[1.1] tracking-tight">
-            <span className="italic-text text-gray-400 block mb-2 text-4xl md:text-5xl lg:text-6xl">
+            <span className="italic-text text-gray-400 block mb-2 text-3xl md:text-5xl lg:text-6xl">
               Expertise at Your Disposal:
             </span>
-            <span className="text-6xl md:text-7xl lg:text-8xl font-bold">
+            <span className="text-4xl md:text-7xl lg:text-8xl font-bold">
               Social Media Consultancy
             </span>
           </h2>

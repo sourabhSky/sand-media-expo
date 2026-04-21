@@ -1,0 +1,44 @@
+{
+  "colors": {
+    "background": "bg-[#121212]",
+    "cardDark": "bg-[#1E1E1E]",
+    "cardLight": "bg-[#F9FAFB]",
+    "accent": "text-[#A1A1AA]"
+  },
+  "header": {
+    "badge": "Advanced Capabilities",
+    "titleMain": "What Separates Us from",
+    "titleItalic": "Every Other Ad Agency",
+    "description": "We combine proprietary systems, AI-powered tools, and creative expertise to build campaigns that consistently outperform industry benchmarks."
+  },
+  "features": [
+    {
+      "icon": "🧪",
+      "title": "A/B Testing at Scale",
+      "desc": "We run structured split tests on headlines, creatives, and bidding strategies to find what converts at the lowest cost.",
+      "list": ["Creative variant testing", "Audience split testing", "Bidding experiments"],
+      "isDark": true
+    },
+    {
+      "icon": "📊",
+      "title": "Conversion Tracking",
+      "desc": "We implement bulletproof server-side tracking so every conversion is attributed correctly.",
+      "list": ["Server-side CAPI", "Google Tag Manager", "Attribution reporting"],
+      "isDark": false
+    },
+    {
+      "icon": "🎯",
+      "title": "Precision Targeting",
+      "desc": "Leveraging first-party data and intent signals to build audiences that actually convert.",
+      "list": ["CRM matching", "Lookalike engineering", "Intent layers"],
+      "isDark": false
+    },
+    {
+      "icon": "🤖",
+      "title": "AI Optimisation",
+      "desc": "We deploy smart bidding and AI creative tools alongside human expertise for strategic control.",
+      "list": ["Smart bidding", "Performance Max", "Anomaly detection"],
+      "isDark": true
+    }
+  ]
+}

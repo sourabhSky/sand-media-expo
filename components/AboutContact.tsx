@@ -26,7 +26,7 @@ export default function AboutContact() {
             </p>
             <h2 className="mb-6 leading-[1.1]">
               Let&apos;s Talk About<br />
-              <span className="italic-text">Your Next Project</span>
+              <span className="italic-text text-gray-400">Your Next Project</span>
             </h2>
             <p className="text-lg text-gray-medium leading-relaxed mb-10 max-w-md">
               Tell us what you&apos;re working on — whether it&apos;s a brand refresh, 

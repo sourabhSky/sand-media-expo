@@ -50,22 +50,7 @@ export default function PpcHero() {
               </Link>
             </div>
 
-            {/* Trust Badges */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-10">
-              {[
-                { score: "5.0X", label: "Avg ROAS", sub: "Delivered" },
-                { score: "$8M+", label: "Ad Spend", sub: "Managed" },
-                { score: "240+", label: "Campaigns", sub: "Running" },
-                { score: "98%", label: "Client", sub: "Retention" },
-              ].map((badge, i) => (
-                <div key={i} className="flex flex-col">
-                  <span className="text-2xl font-bold text-black font-poppins">{badge.score}</span>
-                  <span className="text-[10px] uppercase tracking-tighter text-gray-medium">
-                    <strong className="text-black mr-1">{badge.label}</strong>{badge.sub}
-                  </span>
-                </div>
-              ))}
-            </div>
+           
           </div>
 
           {/* RIGHT SIDE — Performance Dashboard */}

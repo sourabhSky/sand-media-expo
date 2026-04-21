@@ -11,8 +11,9 @@ import SocialMediaProcess from "@/components/SocialMediaProcess";
 import SocialServices from "@/components/SocialServices";
 import ToolsAndSoftware from "@/components/ToolsAndSoftware";
 import { NextPage } from "next";
-
-
+import heroSocialData from "../../public/data/heroSocialData.json"
+import socialServicesData from "../../public/data/socialServicesData.json"
+import AboutContact from "@/components/AboutContact";
 
 
 
@@ -20,15 +21,16 @@ import { NextPage } from "next";
 const index: NextPage = () => {
   return (
    <>
-   <HeroSocial/>
-   <SocialServices/>
+   <HeroSocial data={heroSocialData}/>
+   <SocialServices data={socialServicesData}/>
    <MeasuredResults/>
    <SocialMediaProcess/>
    <SocialMediaConsultancy/>
    <PaidVsOrganic/>
    <ToolsAndSoftware/>
    <FAQSection/>
-   <ContactCTA/>
+   {/* <ContactCTA/> */}
+   <AboutContact />
    </>
   );
 }

@@ -24,8 +24,7 @@ const index: NextPage = () => {
      <ContactInfoCards/>
      <AboutContact/>
      <MapLocation/>
-     <FAQSection/>
-    <CTABand/>
+    
     
    </>
   );

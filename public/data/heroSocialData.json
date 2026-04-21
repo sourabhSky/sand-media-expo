@@ -1,0 +1,31 @@
+{
+  "topTagline": "Top Rated and Award Winning",
+  "titleMain": "Social Media Agency",
+  "titleItalic": "That Delivers Results",
+  "notifications": [
+    {
+      "id": 1,
+      "user": "@sandmedia",
+      "platform": "Instagram",
+      "time": "2m ago",
+      "content": "🚀 Just launched a killer campaign for our latest client — 340% engagement boost in week 1! #DigitalMarketing",
+      "stats": { "likes": "1.2K", "shares": "Share", "comments": "Comment" }
+    },
+    {
+      "id": 2,
+      "user": "@sandmedia",
+      "platform": "Twitter/X",
+      "time": "15m ago",
+      "content": "Real-time management that keeps your brand in the conversation. #SocialMediaMarketing",
+      "stats": { "likes": "850", "shares": "Retweet", "comments": "Reply" }
+    },
+    {
+      "id": 3,
+      "user": "@sandmedia",
+      "platform": "LinkedIn",
+      "time": "1h ago",
+      "content": "Positioning brands as industry authorities through thought leadership. 📈",
+      "stats": { "likes": "2.4K", "shares": "Repost", "comments": "Comment" }
+    }
+  ]
+}

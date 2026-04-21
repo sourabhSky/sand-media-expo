@@ -41,11 +41,11 @@ export default function AboutSplitSection() {
           {/* RIGHT CONTENT */}
           <div>
             <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">
-              About .sand Media
+              About sand Media
             </p>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black leading-tight mb-5">
-              Recognised as a Leading Digital Marketing Agency UK
+              Recognised as a Leading Digital Marketing Agency Udaipur
             </h2>
 
             <p className="text-gray-600 text-sm leading-7 mb-7">

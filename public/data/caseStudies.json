@@ -1,0 +1,34 @@
+{
+  "sectionHeader": {
+    "badge": "Case Studies",
+    "title": "Real Results for",
+    "titleItalic": "Real Brands",
+    "cta": "Get Similar Results →"
+  },
+  "studies": [
+    {
+      "tag": "📦 E-Commerce · Google Shopping",
+      "client": "CartX — Online Retail Brand",
+      "headline": "From ₹80K/mo ad spend to ₹6.4M in revenue in 90 days",
+      "desc": "We restructured their entire Google Shopping and Performance Max setup, built audience segments from scratch, and cut wasted spend by 42%.",
+      "cta": "Get a Similar Strategy →",
+      "metrics": [
+        { "num": "8.1×", "lbl": "ROAS Achieved", "change": "↑ from 2.4× baseline" },
+        { "num": "-42%", "lbl": "Wasted Spend", "change": "↓ month-over-month" },
+        { "num": "₹6.4M", "lbl": "Revenue Generated", "change": "↑ 312% YoY growth", "wide": true }
+      ]
+    },
+    {
+      "tag": "🏠 Real Estate · Meta Lead Ads",
+      "client": "EliteHomes — Property Developer",
+      "headline": "240 qualified property leads in 30 days at ₹1,200 CPL",
+      "desc": "Using hyper-local Facebook audience targeting, video creatives, and an optimised lead funnel, we delivered high-quality property enquiries.",
+      "cta": "Generate Leads Like This →",
+      "metrics": [
+        { "num": "240", "lbl": "Qualified Leads", "change": "↑ in 30 days" },
+        { "num": "₹1.2K", "lbl": "Cost Per Lead", "change": "↓ 60% vs. industry avg" },
+        { "num": "18×", "lbl": "Return on Ad Spend", "change": "↑ top-performing campaign", "wide": true }
+      ]
+    }
+  ]
+}

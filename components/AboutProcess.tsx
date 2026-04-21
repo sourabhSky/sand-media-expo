@@ -69,9 +69,9 @@ export default function AboutProcess() {
         </div>
 
         {/* Process Steps Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-start relative">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-15 left-0 right-0 h-px bg-gray-200 -z-10" />
+          <div className="hidden lg:block absolute top-15 left-0 right-0 h-px bg-gray-300 -z-10" />
 
           {steps.map((step, index) => (
             <div 
@@ -80,7 +80,7 @@ export default function AboutProcess() {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Number Circle */}
-              <div className="relative mb-8">
+              <div className="relative mb-8 flex items-center justify-center md:justify-start">
                 <div className="w-14 h-14 bg-black text-white rounded-full flex items-center justify-center font-poppins font-bold text-lg border-4 border-white shadow-sm group-hover:scale-110 transition-transform duration-300">
                   {step.num}
                 </div>

@@ -50,14 +50,14 @@ const SocialMediaProcess = () => {
         {/* Process Steps Wrapper */}
         <div className="relative">
           {/* Desktop Connecting Line */}
-          <div className="absolute top-10 left-0 w-full h-px border-t border-dashed border-gray-200 hidden lg:block z-0" />
+          <div className="absolute top-10 left-0 w-full h-px border-t border-dashed border-gray-300 hidden lg:block z-0" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative z-10 flex flex-col items-center text-center group">
                 
                 {/* Number Circle */}
-                <div className="w-20 h-20 rounded-full bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-8 transition-all duration-300 group-hover:border-black group-hover:shadow-md">
+                <div className="w-20 h-20 rounded-full bg-white border sm:border-gray-100 border-black shadow-sm flex items-center justify-center mb-8 transition-all duration-300 group-hover:border-black group-hover:shadow-md">
                   <span className="text-black font-bold text-lg">{step.number}</span>
                 </div>
 

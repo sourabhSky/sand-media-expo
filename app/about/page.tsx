@@ -22,8 +22,8 @@ const index: NextPage = () => {
    <>
     <AboutHero />
     <AboutStory />
-    <AboutServices />
-    <AboutProcess />
+    {/* <AboutServices /> */}
+    {/* <AboutProcess /> */}
     <WhyUs />
     <Team />
     <Testimonials />

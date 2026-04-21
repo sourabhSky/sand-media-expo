@@ -45,6 +45,10 @@ export default function Blog() {
 
   return (
     <section id="blog" className="section-padding bg-white">
+
+      {/* need do redesign for blog in future */}
+
+
       <div className="container-custom">
         {/* Section Header */}
         <div className="mb-12">
@@ -119,18 +123,7 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Marquee */}
-        <div className="mt-20 overflow-hidden border-y border-gray-200 py-6">
-          <div className="flex animate-marquee whitespace-nowrap">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="flex items-center mx-8">
-                <span className="text-4xl md:text-5xl font-bold font-display text-gray-200 italic">
-                  INDUSTRY NEWS
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+      
       </div>
     </section>
   )

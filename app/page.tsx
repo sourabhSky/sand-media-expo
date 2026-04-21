@@ -1,28 +1,26 @@
+import AboutContact from "@/components/AboutContact";
 import AboutSplitSection from "@/components/AboutSplitSection";
 import Blog from "@/components/Blog";
-import DarkStatsSection from "@/components/DarkStatsSection";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Industries from "@/components/Industries";
 import Locations from "@/components/Locations";
 import MediaCoverage from "@/components/MediaCoverage";
 import Services from "@/components/Services";
-import Image from "next/image";
+import heroData from "../public/data/heroData.json"
 
 export default function Home() {
   return (
     <>
  
-       <Hero />
+       <Hero data={heroData}  />
         {/* <DarkStatsSection /> */}
         <AboutSplitSection />
        <Services />
-       <MediaCoverage />
+       {/* <MediaCoverage /> */}
        <Industries />
        <Blog />
-       <Locations />
-      
+       {/* <Locations /> */}
+       <AboutContact />
      
       
     </>

@@ -1,0 +1,57 @@
+{
+  "header": {
+    "badge": "Our Services",
+    "title": "Social Media Management Services",
+    "description": "We provide end-to-end social media management across every major platform. From content strategy to community management, paid advertising to analytics — we handle it all so your brand can focus on growth."
+  },
+  "platforms": [
+    {
+      "name": "Instagram Handling",
+      "tag": "Instagram",
+      "tagColor": "bg-[#E1306C]",
+      "users": "2B+",
+      "userType": "Active Users",
+      "description": "Full-service Instagram management — from feed curation and Reels production to Stories, influencer outreach, and shopping integrations that convert followers into customers.",
+      "features": [
+        "Content calendar creation & scheduling",
+        "Reels & Stories production & editing",
+        "Hashtag strategy & community growth",
+        "Instagram Shopping & product tagging",
+        "Influencer collaboration management"
+      ],
+      "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "Facebook Handling",
+      "tag": "Facebook",
+      "tagColor": "bg-[#1877F2]",
+      "users": "3B+",
+      "userType": "Monthly Users",
+      "description": "Strategic Facebook management that maximises organic reach and paid performance — from Page optimisation and content creation to targeted ad campaigns and group management.",
+      "features": [
+        "Facebook Page management & optimisation",
+        "Targeted ad campaigns & retargeting",
+        "Facebook Groups & community building",
+        "Marketplace listings management",
+        "Messenger chatbot & response handling"
+      ],
+      "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "Pinterest Handling",
+      "tag": "Pinterest",
+      "tagColor": "bg-[#BD081C]",
+      "users": "500M+",
+      "userType": "Monthly Users",
+      "description": "Drive discovery and sales through expertly curated Pinterest boards, Rich Pins, Shop the Look integrations, and visual content strategies tailored for your niche.",
+      "features": [
+        "Board strategy & pin optimisation",
+        "Rich Pins & Shop the Look setup",
+        "Visual content design & scheduling",
+        "Pinterest SEO & keyword strategy",
+        "Promoted Pin ad campaigns"
+      ],
+      "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800&auto=format&fit=crop"
+    }
+  ]
+}

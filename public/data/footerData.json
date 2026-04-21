@@ -1,0 +1,35 @@
+{
+  "brand": {
+    "nameMain": ".sand",
+    "nameAlt": " Media",
+    "description": "A multi award winning digital agency based in the United Kingdom. With a distinct offering in Technical Web, Digital Marketing and Creative.",
+    "ctaText": "Interested in working with us?",
+    "ctaLinkText": "Start a Project",
+    "ctaHref": "#quote"
+  },
+  "quickLinks": [
+    { "label": "About", "href": "#about" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Industries", "href": "#industries" },
+    { "label": "Case Studies", "href": "#case-studies" },
+    { "label": "Blog", "href": "#blog" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "support": {
+    "title": "Need Support?",
+    "message": "On our support plan? Submit a ticket or call us.",
+    "hours": "09.00 am – 17.00 pm",
+    "email": "support@sandmedia.co.uk"
+  },
+  "office": {
+    "city": "Udaipur",
+    "address": ["13 Austin Friars", "London", "EC2N 2HE"],
+    "phone": "+44 208 338 1206",
+    "email": "hello@sandmedia.co.uk"
+  },
+  "legalLinks": [
+    { "label": "Terms & Conditions", "href": "#terms" },
+    { "label": "Privacy Policy", "href": "#privacy" },
+    { "label": "Sitemap", "href": "#sitemap" }
+  ]
+}

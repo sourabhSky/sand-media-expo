@@ -17,7 +17,7 @@ const MeasuredResults = () => {
             <span className="block text-6xl md:text-7xl lg:text-8xl font-bold">
               Results You Can
             </span>
-            <span className="italic-text text-gray-medium block text-6xl md:text-7xl lg:text-8xl">
+            <span className="italic-text text-gray-400 block text-6xl md:text-7xl lg:text-8xl">
               Actually Measure
             </span>
           </h2>
@@ -39,7 +39,7 @@ const MeasuredResults = () => {
           {/* CTA Button */}
           <div className="pt-8">
             <button className="btn btn-primary rounded-lg px-12 py-5 text-lg">
-              Get A Quote
+              Start a project
             </button>
           </div>
           
