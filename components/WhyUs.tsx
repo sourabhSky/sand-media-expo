@@ -35,18 +35,18 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="section-padding bg-gray-light" id="why-us">
+    <section className="section-padding bg-gray-light " id="why-us">
       <div className="container-custom">
         {/* Header Section */}
-        <div className="max-w-3xl mb-16 animate-fade-in-up">
+        <div className="max-w-3xl mb-16 animate-fade-in-up ">
           <p className="text-sm font-bold tracking-[0.2em] uppercase text-gray-medium mb-4">
             Why .sand Media
           </p>
-          <h2 className="mb-6">
+          <h3 className="mb-6">
             The Difference That<br />
             <span className="italic-text">Actually Matters</span>
-          </h2>
-          <p className="text-xl text-gray-medium leading-relaxed">
+          </h3>
+          <p className="text-sm text-gray-medium leading-relaxed">
             We&apos;ve heard every agency promise. Here&apos;s what we actually deliver — consistently, transparently, and without the fluff.
           </p>
         </div>
@@ -54,20 +54,20 @@ export default function WhyUs() {
         {/* Why Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 animate-fade-in-up [animation-delay:200ms]">
           {reasons.map((item, index) => (
-            <div key={index} className="flex flex-col gap-6 group">
+            <div key={index} className="flex flex-col gap-6 group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               {/* Icon Box */}
               <div className="w-14 h-14 bg-white border border-gray-200 rounded-2xl flex items-center justify-center text-2xl shadow-sm group-hover:bg-black group-hover:border-black group-hover:shadow-xl transition-all duration-300">
-                <span className="group-hover:scale-110 transition-transform duration-300">
+                <span className="group-hover:scale-110 transition-transform duration-300 ">
                   {item.icon}
                 </span>
               </div>
 
               {/* Content */}
-              <div className="space-y-3">
+              <div className="space-y-3  ">
                 <h3 className="text-xl font-bold font-poppins text-black">
                   {item.title}
                 </h3>
-                <p className="text-gray-medium text-sm leading-relaxed">
+                <p className="text-gray-medium text-xs leading-relaxed">
                   {item.desc}
                 </p>
               </div>

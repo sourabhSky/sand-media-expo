@@ -113,10 +113,15 @@ html {
 }
 
 /* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -124,8 +129,63 @@ html {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up,
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-left {
+  animation: fadeLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-right {
+  animation: fadeRight 0.8s ease-out forwards;
+}
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
 }
 
 /* Link hover effects */
@@ -177,3 +237,32 @@ a {
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
+
+/* Blog Content Styles */
+.blog-content h2 {
+  @apply text-3xl font-bold mt-12 mb-6 text-black;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-bold mt-10 mb-4 text-black;
+}
+
+.blog-content p {
+  @apply text-gray-700 leading-relaxed mb-6 text-lg;
+}
+
+.blog-content ul, .blog-content ol {
+  @apply mb-8 ml-6 space-y-3 list-disc;
+}
+
+.blog-content li {
+  @apply text-gray-700 text-lg;
+}
+
+.blog-content strong {
+  @apply text-black font-bold;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-black pl-6 py-2 italic text-gray-600 my-10 text-xl;
+}

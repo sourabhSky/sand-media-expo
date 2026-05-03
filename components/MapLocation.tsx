@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function MapLocation() {
-  const mapUrl = "https://maps.google.com"; // Replace with your actual Google Maps link
+  const mapUrl = "https://maps.google.com/maps?q=Udaipur,Rajasthan,India"; // Udaipur location map link
 
   return (
     <section className="section-padding bg-white" id="location">
@@ -13,12 +13,12 @@ export default function MapLocation() {
               Find Us
             </p>
             <h2 className="m-0 leading-tight">
-              Our Office <span className="italic-text text-black">Location</span>
+              Our Office <br></br> <span className="italic-text text-black">Location</span>
             </h2>
           </div>
-          <a 
-            href={mapUrl} 
-            target="_blank" 
+          <a
+            href={mapUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-transparent text-black border border-gray-200 rounded-full font-bold text-xs tracking-widest uppercase hover:border-black transition-all duration-300"
           >
@@ -26,41 +26,28 @@ export default function MapLocation() {
           </a>
         </div>
 
-        {/* Map Placeholder */}
+        {/* Map Container */}
         <div className="animate-fade-in-up [animation-delay:100ms]">
-          <a 
-            href={mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative block w-full h-100 md:h-125 bg-gray-light rounded-3xl overflow-hidden group cursor-pointer border border-gray-100"
-          >
-            {/* Background pattern to simulate a map look */}
-            <div className="absolute inset-0 opacity-[0.1] group-hover:opacity-[0.15] transition-opacity duration-500" 
-                 style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
-            </div>
-            
-            {/* Center Pin UI */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-black rounded-full blur-xl opacity-20 animate-pulse"></div>
-                <div className="relative w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-3xl shadow-2xl transform group-hover:scale-110 transition-transform duration-500">
-                  📍
-                </div>
-              </div>
-              <div className="mt-6 text-center">
-                <p className="text-lg font-bold text-black font-poppins mb-1">Studio 4B, Creative Quarter</p>
-                <p className="text-xs text-gray-medium uppercase tracking-widest">Lahore, Pakistan — Click to expand</p>
-              </div>
-            </div>
-          </a>
+          <div className="relative w-full h-[600px] bg-black rounded-[40px] overflow-hidden border border-gray-100 shadow-2xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.0535359146!2d73.6609968412629!3d24.576395567362796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e56550a14411%3A0xdbd8c28cca95b825!2sUdaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1714666680000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(95%) contrast(100%) grayscale(100%)' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
+          </div>
 
           {/* Details Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 border-t border-gray-100 pt-10">
             <div className="flex flex-col gap-2">
               <span className="text-[10px] font-black uppercase tracking-[0.15em] text-gray-400">Address</span>
               <p className="text-sm font-bold text-black leading-relaxed">
-                Studio 4B, Creative Quarter<br />
-                Lahore, Pakistan
+                Udaipur, Rajasthan<br />
+                India
               </p>
             </div>
             
@@ -75,8 +62,8 @@ export default function MapLocation() {
             <div className="flex flex-col gap-2">
               <span className="text-[10px] font-black uppercase tracking-[0.15em] text-gray-400">Nearest Landmark</span>
               <p className="text-sm font-bold text-black leading-relaxed">
-                5 min from Liberty Market<br />
-                Free parking available
+                City Palace, Udaipur<br />
+                Near Lake Pichola
               </p>
             </div>
           </div>

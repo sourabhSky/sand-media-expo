@@ -33,11 +33,11 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(1);
 
   return (
-    <section className="section-padding">
+    <section className="section- py-12">
       <div className="container-custom ">
 
         {/* Title */}
-        <h2 className="mb-10">Web Development FAQ's</h2>
+        <h2 className="mb-10 text-4xl md:text-5xl lg:text-5xl">Web Development FAQ's</h2>
 
         {/* List */}
         <div className="divide-y border-t border-gray-200">

@@ -4,10 +4,23 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
+const services = {
+  'Web': [
+    { name: 'Web Development', href: '/web-dev' },
+    { name: 'Custom Plugin', href: '/custom-plugin' },
+    { name: 'Website Support', href: '#support' },
+  ],
+  'Digital Marketing': [
+    { name: 'SEO', href: '/seo' },
+    { name: 'PPC', href: '/ppc' },
+    { name: 'Social Media', href: '/social-media' },
+    { name: 'Commercial Photography', href: '/commercial-photoshoot' },
+  ],
+}
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,28 +30,10 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const services = {
-    'Web': [
-      
-      { name: 'Web Development', href: '/web-dev' },
-      
-      { name: 'Custom Plugin', href: '/custom-plugin' },
-      { name: 'Website Support', href: '#support' },
-    ],
-    'Digital Marketing': [
-      { name: 'SEO', href: '/seo' },
-      { name: 'PPC', href: '/ppc' },
-      { name: 'Social Media', href: '/social-media' },
-      { name: 'Commercial Photography', href: '/commercial-photoshoot' },
-    ],
-    
-  }
-
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-white'
-      }`}
+      className={` w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white'
+        }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
@@ -53,72 +48,64 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8 h-full">
             <Link
               href="/about"
-              className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
+              className="text-sm font-medium text-gray-900 hover:text-black transition-colors h-20 flex items-center"
             >
               About
             </Link>
 
             {/* Services Dropdown */}
-            <div
-              className="relative group"
-              onMouseEnter={() => setOpenDropdown('services')}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button className="text-sm font-medium text-gray-900 hover:text-black transition-colors flex items-center space-x-1">
+            <div className="relative group h-20 flex items-center">
+              <button className="text-sm font-medium text-gray-900 hover:text-black transition-colors flex items-center space-x-1 h-full">
                 <span>Services</span>
                 <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
               </button>
 
-              {openDropdown === 'services' && (
-                <div className="absolute top-full left-0  w-150 bg-white border border-gray-200 shadow-xl rounded-md p-6 grid grid-cols-3 gap-6 animate-fade-in">
-                  {Object.entries(services).map(([category, items]) => (
-                    <div key={category}>
-                      <h4 className="font-semibold text-black mb-3 text-sm">{category}</h4>
-                      <ul className="space-y-2">
-                        {items.map((item) => (
-                          <li key={item.name}>
-                            <Link
-                              href={item.href}
-                              className="text-sm text-gray-600 hover:text-black transition-colors block"
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <div className="absolute top-full left-0 w-[500px] bg-white border border-gray-100 shadow-2xl rounded-xl p-8 grid grid-cols-2 gap-8 opacity-0 translate-y-4 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300 z-50">
+                {/* Invisible bridge to maintain hover state */}
+                <div className="absolute -top-4 left-0 right-0 h-4 bg-transparent" />
+
+                {Object.entries(services).map(([category, items]) => (
+                  <div key={category} className="space-y-4">
+                    <h4 className="font-bold text-black text-xs uppercase tracking-wider border-b border-gray-100 pb-2">
+                      {category}
+                    </h4>
+                    <ul className="space-y-3">
+                      {items.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            className="text-sm text-gray-600 hover:text-black transition-all hover:translate-x-1 inline-block"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <Link
-              href="#industries"
-              className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
-            >
-              Industries
-            </Link>
-            
-            <Link
-              href="#case-studies"
-              className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
+              href="/case-studies"
+              className="text-sm font-medium text-gray-900 hover:text-black transition-colors h-20 flex items-center"
             >
               Case Studies
             </Link>
 
             <Link
-              href="#blog"
-              className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
+              href="/blog"
+              className="text-sm font-medium text-gray-900 hover:text-black transition-colors h-20 flex items-center"
             >
               Blog
             </Link>
 
             <Link
               href="/contact"
-              className="text-sm font-medium text-gray-900 hover:text-black transition-colors"
+              className="text-sm font-medium text-gray-900 hover:text-black transition-colors h-20 flex items-center"
             >
               Contact
             </Link>

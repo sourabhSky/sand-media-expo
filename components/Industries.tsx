@@ -34,10 +34,10 @@ export default function Industries() {
       <div className="container-custom">
         {/* Section Header */}
         <div className="max-w-4xl mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold font-display mb-6">
             Industries We Work With
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+          <p className="text-lg md:text-sm text-gray-600 leading-relaxed">
             At .sand, we extend our Digital Marketing Agency UK expertise across a diverse range of industries, tailoring strategies to meet the unique demands and opportunities each sector presents.
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function Industries() {
           })}
         </div>
 
-       
+
       </div>
     </section>
   )

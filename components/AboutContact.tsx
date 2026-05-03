@@ -1,13 +1,33 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function AboutContact() {
   const [status, setStatus] = useState<"idle" | "submitting" | "sent">("idle");
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
-    
+
     // Simulate API call
     setTimeout(() => {
       setStatus("sent");
@@ -15,22 +35,22 @@ export default function AboutContact() {
   };
 
   return (
-    <section className="section-padding bg-white" id="contact">
+    <section className="section-padding bg-white overflow-hidden" id="contact" ref={sectionRef}>
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+
           {/* LEFT — INFO */}
-          <div className="animate-fade-in-up">
+          <div className={`${isVisible ? 'animate-fade-up' : ''}`}>
             <p className="text-sm font-bold tracking-[0.2em] uppercase text-gray-medium mb-4">
               Get In Touch
             </p>
-            <h2 className="mb-6 leading-[1.1]">
+            <h2 className="mb-6 lg:text-5xl leading-[1.1]">
               Let&apos;s Talk About<br />
-              <span className="italic-text text-gray-400">Your Next Project</span>
+              <span className="italic-text lg:text-4xl text-gray-400">Your Next Project</span>
             </h2>
-            <p className="text-lg text-gray-medium leading-relaxed mb-10 max-w-md">
-              Tell us what you&apos;re working on — whether it&apos;s a brand refresh, 
-              a new website, or a full growth strategy. We&apos;ll come back to you 
+            <p className="text-lg text-gray-medium leading-relaxed mb-10">
+              Tell us what you&apos;re working on — whether it&apos;s a brand refresh,
+              a new website, or a full growth strategy. We&apos;ll come back to you
               within one business day.
             </p>
 
@@ -41,10 +61,11 @@ export default function AboutContact() {
                 { icon: "💬", title: "WhatsApp Us", sub: "Quickest way to reach us", href: "https://wa.me/923001234567" },
                 { icon: "📍", title: "Lahore · Dubai · London", sub: "Globally distributed team", href: "#" },
               ].map((link, idx) => (
-                <a 
-                  key={idx} 
+                <a
+                  key={idx}
                   href={link.href}
-                  className="flex items-center gap-5 group"
+                  style={{ animationDelay: `${200 + idx * 100}ms` }}
+                  className={`flex items-center gap-5 group ${isVisible ? 'animate-fade-up' : ''}`}
                 >
                   <div className="w-12 h-12 rounded-xl bg-gray-light flex items-center justify-center text-xl group-hover:bg-black group-hover:text-white transition-all duration-300">
                     {link.icon}
@@ -63,9 +84,9 @@ export default function AboutContact() {
           </div>
 
           {/* RIGHT — FORM */}
-          <div className="bg-gray-light p-8 md:p-10 rounded-3xl border border-gray-200 animate-fade-in-up [animation-delay:200ms]">
+          <div className={`bg-gray-light p-8 md:p-10 rounded-3xl border border-gray-200 ${isVisible ? 'animate-fade-up' : ''}`} style={{ animationDelay: '400ms' }}>
             <h3 className="text-xl font-bold mb-8 font-poppins">Start a Conversation</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid md:grid-cols-2 gap-5">
                 <div className="space-y-2">
@@ -101,14 +122,13 @@ export default function AboutContact() {
                 <textarea required rows={4} placeholder="What are you building?" className="w-full bg-white border border-gray-200 rounded-xl px-5 py-3.5 text-sm focus:outline-none focus:border-black transition-colors resize-none"></textarea>
               </div>
 
-              <button 
+              <button
                 disabled={status !== "idle"}
-                type="submit" 
-                className={`w-full py-4 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 ${
-                  status === "sent" 
-                  ? "bg-green-500 text-white" 
+                type="submit"
+                className={`w-full py-4 rounded-xl font-bold text-sm tracking-widest uppercase transition-all duration-300 ${status === "sent"
+                  ? "bg-green-500 text-white"
                   : "bg-black text-white hover:bg-gray-800 hover:-translate-y-1 shadow-lg shadow-black/5"
-                }`}
+                  }`}
               >
                 {status === "idle" && "Send Message →"}
                 {status === "submitting" && "Sending..."}

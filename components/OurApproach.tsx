@@ -32,16 +32,16 @@ const APPROACH_PILLARS = [
 
 const OurApproach = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section- py-12 bg-white">
       <div className="container-custom">
-        
+
         {/* Heading */}
         <div className="max-w-4xl mb-12">
-          <h2 className="mb-4">
-              Web Development Services
+          <h2 className="mb-4 text-4xl md:text-5xl lg:text-5xl">
+            Web Development Services
           </h2>
           <p className="text-gray-600 leading-relaxed">
-           In an era dominated by the digital landscape, your online presence becomes a cornerstone of your business strategy. .sand Media, an award-winning web development agency, provides a transformative approach to web development, leveraging our exceptional technical acumen to bring your digital vision to life. We understand that every business has unique digital needs, and we endeavour to meet these with bespoke, high-quality solutions.
+            In an era dominated by the digital landscape, your online presence becomes a cornerstone of your business strategy. .sand Media, an award-winning web development agency, provides a transformative approach to web development, leveraging our exceptional technical acumen to bring your digital vision to life. We understand that every business has unique digital needs, and we endeavour to meet these with bespoke, high-quality solutions.
           </p>
         </div>
 

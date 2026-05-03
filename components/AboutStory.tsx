@@ -29,38 +29,38 @@ export default function AboutStory() {
     <section className="section-padding bg-white" id="about-story">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* LEFT — CONTENT */}
           <div className="animate-fade-in-up">
-            <p className="text-sm font-bold tracking-[0.2em] uppercase text-gray-medium mb-4">
+            <p className="text-sm font-bold tracking-[0.2em] uppercase text-gray-medium mb-4 lg:ml-10">
               Our Story
             </p>
-            <h2 className="mb-8">
+            <h2 className="mb-8 lg:ml-10">
               Not Just an Agency.<br />
               <span className="italic-text">A Growth Partner.</span>
             </h2>
-            
-            <div className="space-y-6 text-gray-medium text-lg leading-relaxed mb-10">
+
+            <div className="space-y-6 text-gray-medium text-lg lg:text-sm leading-relaxed mb-10 lg:ml-10">
               <p>
-                We started .sand Media with a simple conviction: most agencies do too little, 
-                charge too much, and disappear after the kickoff call. We built the agency 
-                we always wished existed — one that combines genuine creative depth with 
+                We started .sand Media with a simple conviction: most agencies do too little,
+                charge too much, and disappear after the kickoff call. We built the agency
+                we always wished existed — one that combines genuine creative depth with
                 the strategic rigour of a consultancy.
               </p>
-              <p>
-                Over five years and 200+ projects across branding, web, social, and content, 
-                we&apos;ve refined a process that consistently moves the needle for ambitious 
-                brands — from early-stage startups finding their voice to established businesses 
+              {/* <p>
+                Over five years and 200+ projects across branding, web, social, and content,
+                we&apos;ve refined a process that consistently moves the needle for ambitious
+                brands — from early-stage startups finding their voice to established businesses
                 ready to scale.
-              </p>
+              </p> */}
               <p>
-                Today we&apos;re a tight-knit team of strategists, designers, writers, and 
+                Today we&apos;re a tight-knit team of strategists, designers, writers, and
                 developers who care deeply about the work and even more about the results it delivers.
               </p>
             </div>
 
             {/* Values Grid */}
-            <div className="grid sm:grid-cols-2 gap-6 mb-12">
+            <div className="grid sm:grid-cols-2 gap-6 mb-12 lg:ml-10">
               {values.map((value, index) => (
                 <div key={index} className="flex gap-4">
                   <span className="text-2xl shrink-0">{value.icon}</span>
@@ -74,15 +74,15 @@ export default function AboutStory() {
               ))}
             </div>
 
-            <Link href="#contact" className="btn btn-primary group">
-              Start a Conversation 
+            <Link href="#contact" className="btn btn-primary group ml-10">
+              Start a Conversation
               <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>
 
           {/* RIGHT — VISUAL */}
-          <div className="relative animate-fade-in-up [animation-delay:200ms]">
-            <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative animate-fade-in-up [animation-delay:200ms] lg:mr-12">
+            <div className="relative max-w-md ml-auto aspect-[4/4.5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=85&fit=crop"
                 alt="Agency working session"
@@ -101,7 +101,7 @@ export default function AboutStory() {
               </div>
 
               {/* Floating Status Badge */}
-              <div className="absolute top-6 right-6 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+              <div className="absolute top-6 right-6 bg-black text-white px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 lg:ml-10">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-blink" />
                 Accepting Projects Now
               </div>

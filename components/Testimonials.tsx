@@ -47,15 +47,16 @@ const testimonials = [
 export default function Testimonials() {
   // 2. Initialize the Autoplay plugin
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { 
-      align: "start", 
-      loop: true 
-    }, 
+    {
+      align: "start",
+      loop: true,
+      skipSnaps: false
+    },
     [
-      Autoplay({ 
-        delay: 4000, // 4 seconds per slide
-        stopOnInteraction: false, // Continue playing after user clicks buttons
-        stopOnMouseEnter: true    // Pause when user hovers to read
+      Autoplay({
+        delay: 5000, // 5 seconds per slide for better readability
+        stopOnInteraction: false,
+        stopOnMouseEnter: true
       })
     ]
   );
@@ -64,57 +65,82 @@ export default function Testimonials() {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="section-padding bg-black text-white overflow-hidden" id="testimonials">
-      <div className="container-custom">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 animate-fade-in-up">
+    <section className="section-padding bg-black text-white relative overflow-hidden" id="testimonials">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-gray-900 rounded-full blur-[100px] opacity-40" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-gray-900 rounded-full blur-[100px] opacity-40" />
+      </div>
+
+      <div className="container-custom relative z-10">
+        <div className="flex flex-col items-center md:items-end md:flex-row justify-between gap-8 mb-8 animate-fade-in-up text-center md:text-left">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold tracking-[0.2em] uppercase text-gray-400 mb-4">
-              Client Stories
-            </p>
-            <h2 className="text-white mb-6 font-poppins">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-900 text-gray-400 mb-6 border border-gray-800">
+              <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+              <p className="text-[10px] font-bold tracking-[0.2em] uppercase">
+                Client Stories
+              </p>
+            </div>
+
+            <h3 className="text-white mb-3 font-poppins leading-[1.1]">
               What Our Clients<br />
-              <span className="italic-text text-white">Actually Say</span>
-            </h2>
+              <span className="text-gradient italic-text !from-white !to-gray-500">Actually Say</span>
+            </h3>
           </div>
 
-          <div className="flex gap-4">
-            <button 
+          <div className="hidden md:flex gap-4 justify-center md:justify-start">
+            <button
               onClick={scrollPrev}
-              className="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer"
+              className="w-14 h-14 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500 cursor-pointer group"
+              aria-label="Previous testimonial"
             >
-              ←
+              <span className="group-hover:-translate-x-1 transition-transform">←</span>
             </button>
-            <button 
+            <button
               onClick={scrollNext}
-              className="w-12 h-12 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer"
+              className="w-14 h-14 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500 cursor-pointer group"
+              aria-label="Next testimonial"
             >
-              →
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
         </div>
 
-        <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
-          <div className="flex gap-6">
+        <div className="overflow-hidden cursor-grab active:cursor-grabbing " ref={emblaRef}>
+          <div className="flex gap-6 py-4 ">
             {testimonials.map((t, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0"
               >
-                <div className="h-full bg-gray-dark border border-gray-800 p-10 rounded-3xl flex flex-col justify-between group hover:border-gray-600 transition-colors">
+                <div className="h-full bg-linear-to-b from-gray-900/50 to-black border border-gray-800 p-8 md:p-10 rounded-[2rem] flex flex-col justify-between group hover:border-gray-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
                   <div>
-                    <div className="text-yellow-500 text-sm tracking-widest mb-6">★★★★★</div>
-                    <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                    <div className="flex gap-1 mb-8 opacity-60 group-hover:opacity-100 transition-opacity">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-4 h-4 fill-yellow-500" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+
+                    <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 group-hover:text-white transition-colors">
                       &quot;{t.quote}&quot;
                     </p>
                   </div>
 
-                  <div className="flex items-center gap-4 border-t border-gray-800 pt-8">
-                    <div className="w-12 h-12 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm shrink-0">
-                      {t.initials}
+                  <div className="flex items-center gap-4 pt-8 border-t border-gray-800/50">
+                    <div className="relative">
+                      <div className="w-14 h-14 rounded-full bg-linear-to-br from-white to-gray-400 text-black font-black flex items-center justify-center text-base shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                        {t.initials}
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-black border-2 border-gray-900 rounded-full flex items-center justify-center">
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+                      </div>
                     </div>
                     <div>
-                      <div className="font-bold text-white leading-tight">{t.author}</div>
-                      <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-1">
+                      <div className="font-bold text-white text-lg leading-tight group-hover:text-white transition-colors">{t.author}</div>
+                      <div className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.15em] mt-1.5 flex items-center gap-2">
+                        <span className="w-4 h-px bg-gray-800" />
                         {t.role}
                       </div>
                     </div>
@@ -123,6 +149,24 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Mobile Arrows (Visible only on Mobile) */}
+        <div className="flex md:hidden justify-center gap-4 mt-10 animate-fade-in-up">
+          <button
+            onClick={scrollPrev}
+            className="w-14 h-14 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500 cursor-pointer active:scale-95"
+            aria-label="Previous testimonial"
+          >
+            <span>←</span>
+          </button>
+          <button
+            onClick={scrollNext}
+            className="w-14 h-14 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-all duration-500 cursor-pointer active:scale-95"
+            aria-label="Next testimonial"
+          >
+            <span>→</span>
+          </button>
         </div>
       </div>
     </section>

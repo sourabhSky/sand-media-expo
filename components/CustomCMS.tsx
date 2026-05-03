@@ -27,11 +27,11 @@ const CMS_ADVANTAGES = [
 
 export default function CustomCMS() {
   return (
-    <section className="section-padding">
+    <section className="section- py-6">
       <div className="container-custom ">
 
         {/* Title */}
-        <h2 className="mb-4">Custom CMS Development</h2>
+        <h2 className="mb-4 text-4xl md:text-5xl lg:text-5xl">Custom CMS Development</h2>
 
         <p className="text-gray-600 mb-12 max-w-3xl">
           In today's digital age, the need for a unique online presence is paramount.
